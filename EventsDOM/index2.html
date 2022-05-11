@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            background-color: aqua;
+            width: 20%;
+            height: 50px;
+            margin:2%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="1">Click Me</button>
+        <button id="2">Click Me</button>
+        <button id="3">Click Me</button>
+    </div>
+    <div id="box">
+        this is a box;
+    </div>
+</body>
+<script>
+    const buttons = document.querySelectorAll('button');
+    const div_box = document.querySelector('#box');
+
+    div_box.addEventListener('dblclick',() => {
+        alert('Double Click !');
+    });
+
+    buttons.forEach((button)=>{
+        button.addEventListener('click',() =>{
+            alert(button.id);
+        })
+    });
+</script>
+</html>

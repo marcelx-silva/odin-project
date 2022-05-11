@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- 
+       <button onclick="alert('Hello World !')">Click me</button> method one 
+       <button id='btn'>Clike me </button>  method two
+       <button id="btn-2">Click Me Too</button> method three
+    -->  
+    <button onclick="helloWorldFunction()">Click me</button>
+    <button id='btn'>Clike me </button> <!-- method two -->
+    <button id="btn-2">Click Me Too</button>
+    <button id="btn-3">Click Me Again</button>
+</body>
+<script>
+
+    const btn = document.querySelector('#btn');
+    const btn_2 = document.querySelector('#btn-2');
+    const btn_3 = document.querySelector('#btn-3');
+
+    //btn.onclick = () => alert('Hello World !!');
+
+    /*const btn_2 = document.querySelector('#btn-2');
+    btn_2.addEventListener('click', () =>{
+        alert('Hello World !!!');
+    });
+    */
+
+    btn.onclick = () => helloWorldFunction();
+    btn_2.addEventListener('click', helloWorldFunction);
+    btn_3.addEventListener('click',function(e){alert(e.target.style.background = 'blue')});
+
+    function helloWorldFunction() {
+        alert("Hello World !!!");
+    }
+
+
+</script>
+</html>
